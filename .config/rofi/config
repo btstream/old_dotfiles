@@ -1,0 +1,4 @@
+rofi.theme: ~/.config/rofi/gruvbox-dark-blue.rasi
+rofi.font: Monospace 10
+rofi.combi: run
+rofi.modi: drun
