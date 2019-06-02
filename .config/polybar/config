@@ -56,8 +56,7 @@ font-0 = Monospace:pixelsize=10;1
 font-1 = Font Awesome 5 Free:style=Solid:pixelsize=8;1
 
 modules-left = i3 xwindow
-modules-right = pulseaudio memory cpu temperature date powermenu
-
+modules-right = change-vol-device pulseaudio memory cpu temperature date powermenu
 
 tray-position = right
 tray-padding = 5
@@ -160,11 +159,16 @@ format-prefix-foreground = ${colors.foreground-alt}
 format-underline = #4285f4
 label = %date% %time%
 
+[module/change-vol-device]
+type = custom/script
+exec = echo VOL
+click-left = "$HOME/.config/i3/scripts/ch-vol-dev.sh"
+
 [module/pulseaudio]
 type = internal/pulseaudio
 
 format-volume = <label-volume> <bar-volume>
-label-volume = VOL %percentage%%
+label-volume = %percentage%%
 label-volume-foreground = ${root.foreground}
 
 label-muted =  muted
