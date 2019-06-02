@@ -197,7 +197,7 @@ bindsym $mod+r mode "resize"
 #################
 ## set wallpaper
 #################
-exec_always /usr/bin/feh --bg-scale $HOME/Pictures/Wallpapers/bing-20180816.png &
+exec_always /usr/bin/feh --bg-scale $HOME/Pictures/Wallpapers/i3wallpaper &
 
 #################
 ## auto start up
