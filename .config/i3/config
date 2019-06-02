@@ -205,6 +205,9 @@ exec_always /usr/bin/feh --bg-scale $HOME/Pictures/Wallpapers/bing-20180816.png 
 ## polybar
 exec_always --no-startup-id $HOME/.config/polybar/launch.sh &
 
+## dunst, in case does not auto start up
+exec_always --no-startup-id /usr/bin/dunst &
+
 ## networkmanager
 exec_always --no-startup-id nm-applet --sm-disable &
 
