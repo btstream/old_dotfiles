@@ -65,7 +65,7 @@ bindsym $mod+Shift+q kill
 bindsym $mod+d exec --no-startup-id "rofi -show"
 
 # change default vol device
-bindsym $mod+Shift+a exec --no-startup-id $HOME/.config/i3/scripts/ch-vol-dev.sh
+bindsym $mod+Shift+a exec --no-startup-id $HOME/.config/i3/scripts/ch-vol-dev.sh &
 
 # change focus
 bindsym $mod+h focus left
@@ -192,9 +192,9 @@ mode "resize" {
 bindsym $mod+r mode "resize"
 
 #################
-## set wallpaper
+## set wallpaper, using a script to get bing wall paper
 #################
-exec_always /usr/bin/feh --bg-scale $HOME/Pictures/Wallpapers/i3wallpaper &
+exec_always --no-startup-id $HOME/.config/i3/scripts/bingwallpaper.sh &
 
 #################
 ## auto start up
@@ -209,7 +209,7 @@ exec_always --no-startup-id /usr/bin/dunst &
 exec_always --no-startup-id nm-applet --sm-disable &
 
 ## compton
-exec_always /usr/bin/compton &
+exec_always --no-startup-id /usr/bin/compton &
 
 ## fcitx
-exec_always /usr/bin/fcitx-autostart &
+exec_always --no-startup-id/usr/bin/fcitx-autostart &
