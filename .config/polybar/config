@@ -54,6 +54,7 @@ module-margin-right = 1
 
 font-0 = Monospace:pixelsize=10;1
 font-1 = Font Awesome 5 Free:style=Solid:pixelsize=8;1
+font-2 = Noto Sans Mono CJK SC:pixelsize=9;1
 
 modules-left = i3 xwindow
 modules-right = change-vol-device pulseaudio memory cpu temperature date powermenu
@@ -80,6 +81,7 @@ cursor-scroll = ns-resize
 type = internal/xwindow
 label = %title:0:30:...%
 format-prefix = " "
+label-font = 3
 
 [module/filesystem]
 type = internal/fs
