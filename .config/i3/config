@@ -14,9 +14,10 @@ set $mod Mod4
 ################
 ## gaps
 ################
-for_window [class="^.*"] border pixel 1 
+for_window [class="^.*"] border pixel 1
+for_window [class="Chromium|Firefox"] border pixel 2
 gaps inner 5 
-gaps outer 5
+gaps outer 8
 
 
 ################
@@ -39,7 +40,7 @@ client.urgent           $urgent-bg-color    $urgent-bg-color   $text-color      
 #################
 ## fonts
 #################
-font pango:Noto Sans 8
+font pango:Noto Sans Mono CJK SC 9
 
 #################
 ## window setting
