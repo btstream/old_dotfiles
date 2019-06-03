@@ -1,9 +1,8 @@
 export QT_QPA_PLATFORMTHEME="qt5ct"
 
 # xdg_session_info
-export XDG_SESSION_DESKTOP=KDE
+export XDG_CURRENT_DESKTOP="KDE"
 export KDE_SESSION_VERSION="5"
-export XDG_SESSION_TYPE=x11
 
 export GTK_IM_MODULE=fcitx
 export QT_IM_MODULE=fcitx
