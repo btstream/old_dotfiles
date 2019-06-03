@@ -51,7 +51,7 @@ while getopts "1" opt; do
   esac
 done
 
-/usr/bin/feh --bg-scale $wallpaperPath/$wallpaperName &
+/usr/bin/feh --bg-scale $wallpaperPath/$wallpaperName 
 
 # Required Image Uri.
 reqImg=$bing$api$format$day$market$const
@@ -97,12 +97,15 @@ do
     # Saving Image to collection.
     curl -L -s -o $path$imgName $reqImgURL
     # Logging.
-    echo "Saving image to $path$imgName"
-    # Writing copyright.
-    echo "$copyright" > $path${imgName/%.jpg/.txt}
-    ln -sf $path$imgName $wallpaperPath/$wallpaperName
-    /usr/bin/feh --bg-scale $wallpaperPath/$wallpaperName &
-    betterlockscreen -u $wallpaperPath/$wallpaperName &
+
+    if [[ -e $path$imgName ]]; then 
+        echo "Saving image to $path$imgName"
+        # Writing copyright.
+        echo "$copyright" > $path${imgName/%.jpg/.txt}
+        ln -sf $path$imgName $wallpaperPath/$wallpaperName
+        /usr/bin/feh --bg-scale $wallpaperPath/$wallpaperName 
+        betterlockscreen -u $wallpaperPath/$wallpaperName &
+    fi
   fi
   
   
