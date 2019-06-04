@@ -1,0 +1,11 @@
+! basic configuration
+Xft.dpi:        96
+Xft.antialias:  true
+Xft.rgba:       rgb
+Xft.hinting:    true
+Xft.hintstyle:  hintslight
+Xft.autohint:   true
+Xft.lcdfilter:  lcddefault
+
+! urxvt config
+#include ".config/urxvt/config"

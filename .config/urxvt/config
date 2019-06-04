@@ -1,0 +1,88 @@
+!!!!!!!!!!!!!!!!!!!!
+! basic config
+!!!!!!!!!!!!!!!!!!!!
+URxvt.iso14755: false
+URxvt.iso14755_52: false
+
+!!!!!!!!!!!!!!!!!!!!
+! Apperance config
+!!!!!!!!!!!!!!!!!!!!
+
+! cursor
+URxvt.cursorBlink: true
+
+! font config
+URxvt.font: xft:Fira Code:size=11,xft:FZZhunYuan\\-M02S:size=11
+URxvt.letterSpace: 0
+
+! scrollbar
+URxvt.scrollBar: false
+URxvt.scrollBar_right: false
+URxvt.scrollBar_floating: false
+URxvt.scrollstyle: rxvt
+
+! window padding
+URxvt.internalBorder: 10
+
+! backgroud
+urxvt.depth: 32
+urxvt.background: [90]#282828 
+
+!!!!!!!! colors !!!!!!!!!!!
+! special
+URxvt.foreground:   #ffffff
+URxvt.background:   #000000
+URxvt.cursorColor:  #ffffff
+
+! black
+URxvt.color0:       #151515
+URxvt.color8:       #696969
+
+! red
+URxvt.color1:       #ff8eaf
+URxvt.color9:       #ed4c7a
+
+! green
+URxvt.color2:       #a6e25f
+URxvt.color10:      #a6e179
+
+! yellow
+URxvt.color3:       #f8e578
+URxvt.color11:      #ffdf6b
+
+! blue
+URxvt.color4:       #a6e2f0
+URxvt.color12:      #79d2ff
+
+! magenta
+URxvt.color5:       #e85b92
+URxvt.color13:      #bb5d79
+
+! cyan
+URxvt.color6:       #5f868f
+URxvt.color14:      #87a8af
+
+! white
+URxvt.color7:       #d5f1f2
+URxvt.color15:      #e2f1f6
+
+!!!!!!!!!!!!!!!!!!!!!
+! extensions
+!!!!!!!!!!!!!!!!!!!!!
+URxvt.perl-ext-common: default,clipboard,url-select,keyboard-select,matcher
+URxvt.url-launcher: /usr/bin/xdg-open
+URxvt.matcher.button: 1
+URxvt.underlineURLs: true
+URxvt.urlButton: 1
+
+!!!!!!!!!!!!!!!!!!!!!
+! keyboard shortcuts
+!!!!!!!!!!!!!!!!!!!!!
+URxvt.keysym.Shift-Control-V: eval:paste_clipboard
+URxvt.keysym.Shift-Control-C: eval:selection_to_clipboard
+
+URxvt.keysym.C-Down: resize-font:smaller
+URxvt.keysym.C-Up: resize-font:bigger
+
+URxvt.keysym.Home: \033[1~
+URxvt.keysym.End: \033[4~

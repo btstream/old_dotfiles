@@ -56,7 +56,7 @@ floating_modifier $mod
 
 # start a terminal
 #bindsym $mod+Return exec i3-sensible-terminal
-bindsym $mod+Return exec --no-startup-id alacritty &
+bindsym $mod+Return exec --no-startup-id urxvtc &
 
 # kill focused window
 bindsym $mod+Shift+q kill
@@ -206,11 +206,20 @@ exec_always --no-startup-id $HOME/.config/polybar/launch.sh &
 ## dunst, in case does not auto start up
 exec_always --no-startup-id /usr/bin/dunst &
 
+## urxvtd
+exec_always --no-startup-id /usr/bin/urxvtd -q -f -o &
+
 ## networkmanager
 exec_always --no-startup-id nm-applet --sm-disable &
 
 ## compton
 exec_always --no-startup-id /usr/bin/compton &
+
+## kwallet
+exec_always --no-startup-id /usr/lib/pam_kwallet_init &
+
+## gnome-keyring
+exec_always --no-startup-id /usr/bin/gnome-keyring-daemon --start --components=pkcs11,secrets &
 
 ## fcitx
 exec_always --no-startup-id/usr/bin/fcitx-autostart &
