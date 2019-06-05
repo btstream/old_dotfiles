@@ -119,7 +119,12 @@ bindsym $mod+a focus parent
 #bindsym $mod+d focus child
 
 # lockscreen
-bindsym Mod1+Ctrl+l exec betterlockscreen -l dim
+bindsym Mod1+Ctrl+l exec betterlockscreen -l blur
+
+# screen shoot
+bindsym Print exec --no-startup-id /usr/bin/flameshot full -p $HOME/Pictures/Screenshots
+bindsym Ctrl+Print exec --no-startup-id /usr/bin/flameshot gui
+bindsym Ctrl+Shift+Print exec --no-startup-id /usr/bin/flameshot full -c 
 
 # Define names for default workspaces for which we configure key bindings later on.
 # We use variables to avoid repeating the names in multiple places.
@@ -211,6 +216,9 @@ exec_always --no-startup-id /usr/bin/urxvtd -q -f -o &
 
 ## networkmanager
 exec_always --no-startup-id nm-applet --sm-disable &
+
+## flameshot
+exec_always --no-startup-id /usr/bin/flameshot &
 
 ## compton
 exec_always --no-startup-id /usr/bin/compton &
