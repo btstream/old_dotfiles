@@ -81,30 +81,32 @@ do
   # start date
   startDate=$(echo $apiResp | grep -oP "\"startdate\":\"[^\"]*" | cut -d "\"" -f 4)
   
-  # Checking if reqImgURL exists.
-  if [[ ! $(wget --quiet --spider --max-redirect 0 $reqImgURL) ]]; then
-    reqImgURL=$defImgURL
-  fi
-
-  # Logging.
-  echo "Bing Image of the day: $reqImgURL"
-
-  # Getting Image Name.
-  imgName=bing-wallpaper-$startDate$extn
-
-  # Only for saved images
-  if [[ ! -e $path$imgName ]]; then
-    # Saving Image to collection.
-    curl -L -s -o $path$imgName $reqImgURL
+  # only do next actions to 
+  if [[ x$startDate != x ]]; then
+    # Checking if reqImgURL exists.
+    if [[ ! $(wget --quiet --spider --max-redirect 0 $reqImgURL) ]]; then
+        reqImgURL=$defImgURL
+    fi
     # Logging.
+    echo "Bing Image of the day: $reqImgURL"
+    
+    # Getting Image Name.
+    imgName=bing-wallpaper-$startDate$extn
 
-    if [[ -e $path$imgName ]]; then 
-        echo "Saving image to $path$imgName"
-        # Writing copyright.
-        echo "$copyright" > $path${imgName/%.jpg/.txt}
-        ln -sf $path$imgName $wallpaperPath/$wallpaperName
-        /usr/bin/feh --bg-scale $wallpaperPath/$wallpaperName 
-        betterlockscreen -u $wallpaperPath/$wallpaperName &
+    # Only for image
+    if [[ ! -e $path$imgName ]]; then
+      # Saving Image to collection.
+      curl -L -s -o $path$imgName $reqImgURL
+      # Logging.
+
+      if [[ -e $path$imgName ]]; then 
+          echo "Saving image to $path$imgName"
+          # Writing copyright.
+          echo "$copyright" > $path${imgName/%.jpg/.txt}
+          ln -sf $path$imgName $wallpaperPath/$wallpaperName
+          /usr/bin/feh --bg-scale $wallpaperPath/$wallpaperName 
+          betterlockscreen -u $wallpaperPath/$wallpaperName &
+      fi
     fi
   fi
   
