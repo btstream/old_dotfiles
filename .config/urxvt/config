@@ -13,7 +13,7 @@ URxvt.cursorBlink: true
 
 ! font config
 URxvt.font: xft:Fira Code:size=11,xft:FZZhunYuan\\-M02S:size=11,xft:FZZhunYuan\\-M02T:size=11
-URxvt.letterSpace: 0
+URxvt.letterSpace: -1
 
 ! scrollbar
 URxvt.scrollBar: false
@@ -26,7 +26,7 @@ URxvt.internalBorder: 10
 
 ! backgroud
 urxvt.depth: 32
-urxvt.background: [90]#282828 
+urxvt.background: [95]#282828 
 
 !!!!!!!! colors !!!!!!!!!!!
 ! special
