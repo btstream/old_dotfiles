@@ -61,7 +61,7 @@ modules-right = change-vol-device pulseaudio memory cpu temperature date powerme
 
 tray-position = right
 tray-padding = 5
-tray-maxsize = 22
+tray-maxsize = 15
 ;tray-background = #0063ff
 
 wm-restack = i3
