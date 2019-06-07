@@ -53,6 +53,10 @@ done
 
 /usr/bin/feh --bg-scale $wallpaperPath/$wallpaperName 
 
+# starting update after 5 minutes
+# in case there are no internet connections
+sleep 300
+
 # Required Image Uri.
 reqImg=$bing$api$format$day$market$const
 
