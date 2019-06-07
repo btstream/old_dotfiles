@@ -52,14 +52,15 @@ padding-right = 2
 module-margin-left = 1
 module-margin-right = 1
 
-font-0 = FuraCode Nerd Font:pixelsize=10;1
-font-1 = Noto Sans Mono CJK SC:pixelsize=10;0
+font-0 = Monospace:pixelsize=10;1
+font-1 = Font Awesome 5 Free:style=Solid:pixelsize=8;1
+font-2 = Noto Sans Mono CJK SC:pixelsize=9;1
 
 modules-left = i3 xwindow
 modules-right = change-vol-device pulseaudio memory cpu temperature date powermenu
 
 tray-position = right
-tray-padding = 2
+tray-padding = 5
 tray-maxsize = 15
 ;tray-background = #0063ff
 
@@ -79,8 +80,8 @@ cursor-scroll = ns-resize
 [module/xwindow]
 type = internal/xwindow
 label = %title:0:30:...%
-format-prefix = "ﬓ "
-label-font = 2
+format-prefix = " "
+label-font = 3
 
 [module/filesystem]
 type = internal/fs
@@ -92,16 +93,9 @@ label-mounted = %{F#0a81f5}%mountpoint%%{F-}: %percentage_used%%
 label-unmounted = %mountpoint% not mounted
 label-unmounted-foreground = ${colors.foreground-alt}
 
-[module/start]
-type = custom/script
-exec = echo ""
-click-left = "rofi -show"
-
-
 [module/i3]
 type = internal/i3
 format = <label-state> <label-mode>
-format-prefix = " "
 index-sort = true
 wrapping-scroll = false
 
@@ -139,7 +133,7 @@ label-urgent-padding = 1
 [module/cpu]
 type = internal/cpu
 interval = 2
-format-prefix = "﬙ "
+format-prefix = " "
 format-prefix-foreground = ${colors.foreground-alt}
 format-underline = #f90000
 label = %percentage:2%%
@@ -147,7 +141,7 @@ label = %percentage:2%%
 [module/memory]
 type = internal/memory
 interval = 2
-format-prefix = " "
+format-prefix = " "
 format-prefix-foreground = ${colors.foreground-alt}
 format-underline = #4bffdc
 label = %percentage_used%%
@@ -162,7 +156,7 @@ date-alt = " "
 time = %H:%M
 time-alt = %H:%M
 
-format-prefix =  
+format-prefix = 
 format-prefix-foreground = ${colors.foreground-alt}
 format-underline = #4285f4
 label = %date% %time%
@@ -179,7 +173,7 @@ format-volume = <label-volume> <bar-volume>
 label-volume = %percentage%%
 label-volume-foreground = ${root.foreground}
 
-label-muted =  muted
+label-muted =  muted
 label-muted-foreground = #666
 
 bar-volume-width = 10
