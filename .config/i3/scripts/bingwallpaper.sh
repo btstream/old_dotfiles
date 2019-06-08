@@ -1,6 +1,10 @@
 #!/bin/bash
 # author: Whizzzkid (me@nishantarora.in)
 
+rm -rf /tmp/*-bingwallpaper.log
+logFile=$(mktemp --suffix="-bingwallpaper.log")
+
+
 # Base URL.
 bing="http://www.bing.com"
 
@@ -55,7 +59,9 @@ done
 
 # starting update after 5 minutes
 # in case there are no internet connections
-sleep 300
+sleep 180
+
+echo "Starting fetch bing wallpaper" >> $logFile
 
 # Required Image Uri.
 reqImg=$bing$api$format$day$market$const
@@ -64,12 +70,12 @@ while [ 1 ]
 do
 
   # Logging.
-  echo "Pinging Bing API..."
+  echo "Pinging Bing API..." >> $logFile
 
   # Fetching API response.
   apiResp=$(curl -s $reqImg)
   if [ $? -gt 0 ]; then
-    echo "Ping failed!"
+    echo "Ping failed!" >> $logFile
     exit 1
   fi
   
@@ -92,7 +98,7 @@ do
         reqImgURL=$defImgURL
     fi
     # Logging.
-    echo "Bing Image of the day: $reqImgURL"
+    echo "Bing Image of the day: $reqImgURL" >> $logFile
     
     # Getting Image Name.
     imgName=bing-wallpaper-$startDate$extn

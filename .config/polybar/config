@@ -104,6 +104,7 @@ format = <label-state> <label-mode>
 format-prefix = " "
 index-sort = true
 wrapping-scroll = false
+strip-wsnumbers = true
 
 ; Only show workspaces on the same output as the bar
 ;pin-workspaces = true
@@ -168,8 +169,8 @@ format-underline = #4285f4
 label = %date% %time%
 
 [module/change-vol-device]
-type = custom/script
-exec = echo VOL
+type = custom/text
+content = VOL 
 click-left = "$HOME/.config/i3/scripts/ch-vol-dev.sh"
 
 [module/pulseaudio]
@@ -214,9 +215,9 @@ label = %temperature-c%
 label-warn = %temperature-c%
 label-warn-foreground = ${colors.secondary}
 
-ramp-0 = 
+ramp-0 = 
 ramp-1 = 
-ramp-2 = 
+ramp-2 = 
 ramp-foreground = ${colors.foreground-alt}
 
 [module/powermenu]
@@ -228,7 +229,7 @@ format-spacing = 1
 
 label-open = 
 label-open-foreground = ${colors.foreground-alt}
-label-close =  cancel
+label-close = ﰸ cancel
 label-close-foreground = ${colors.secondary}
 label-separator = |
 label-separator-foreground = ${colors.foreground-alt}

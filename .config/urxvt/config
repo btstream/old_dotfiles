@@ -12,7 +12,7 @@ URxvt.iso14755_52: false
 URxvt.cursorBlink: true
 
 ! font config
-URxvt.font: xft:Fira Code:size=11,xft:FZZhunYuan\\-M02S:size=11,xft:FZZhunYuan\\-M02T:size=11
+URxvt.font: xft:FuraCode Nerd Font Mono:size=11,xft:FZZhunYuan\\-M02S:size=11,xft:FZZhunYuan\\-M02T:size=11
 URxvt.letterSpace: -1
 
 ! scrollbar

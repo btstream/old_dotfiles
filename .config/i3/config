@@ -47,7 +47,7 @@ font pango:Noto Sans Mono CJK SC 9
 #################
 ## float thunderbird composite window
 for_window [window_role="Msgcompose|Preferences" class="(?i)Thunderbird"] floating enable
-for_window [class="netease-cloud-music"] floating enable
+for_window [class="netease-cloud-music|vlc"] floating enable
 
 for_window [window_role="pop-up"] floating enable
 for_window [window_role="task_dialog"] floating enable
@@ -136,18 +136,29 @@ bindsym XF86AudioRaiseVolume exec --no-startup-id amixer -q -D pulse set Master 
 bindsym XF86AudioLowerVolume exec --no-startup-id amixer -q -D pulse set Master 5%- unmute #decrease sound volume
 bindsym XF86AudioMute exec --no-startup-id amixer -q -D pulse set Master mute # mute sound
 
+# reload the configuration file
+bindsym $mod+Shift+c reload
+# restart i3 inplace (preserves your layout/session, can be used to upgrade i3)
+bindsym $mod+Shift+r restart
+# exit i3 (logs you out of your X session)
+bindsym $mod+Shift+e exec "i3-nagbar -t warning -m 'You pressed the exit shortcut. Do you really want to exit i3? This will end your X session.' -B 'Yes, exit i3' 'i3-msg exit'"
+
+
+#####################
+## workspace 
+#####################
 # Define names for default workspaces for which we configure key bindings later on.
 # We use variables to avoid repeating the names in multiple places.
-set $ws1 "1"
-set $ws2 "2"
-set $ws3 "3"
-set $ws4 "4"
-set $ws5 "5"
-set $ws6 "6"
-set $ws7 "7"
-set $ws8 "8"
-set $ws9 "9"
-set $ws10 "10"
+set $ws1 "1:TERM"
+set $ws2 "2:WEB"
+set $ws3 "3:DEV"
+set $ws4 "4:FM"
+set $ws5 "5:OFFICE"
+set $ws6 "6:MM"
+set $ws7 "7:NS4W"
+set $ws8 "8:RD"
+set $ws9 "9:CHAT"
+set $ws10 "10:MAIL"
 
 # switch to workspace
 bindsym $mod+1 workspace $ws1
@@ -173,12 +184,18 @@ bindsym $mod+Shift+8 move container to workspace $ws8
 bindsym $mod+Shift+9 move container to workspace $ws9
 bindsym $mod+Shift+0 move container to workspace $ws10
 
-# reload the configuration file
-bindsym $mod+Shift+c reload
-# restart i3 inplace (preserves your layout/session, can be used to upgrade i3)
-bindsym $mod+Shift+r restart
-# exit i3 (logs you out of your X session)
-bindsym $mod+Shift+e exec "i3-nagbar -t warning -m 'You pressed the exit shortcut. Do you really want to exit i3? This will end your X session.' -B 'Yes, exit i3' 'i3-msg exit'"
+# assign applications to workspace
+assign [class="Chromium|Firefox"] $ws2 
+assign [class="code-oss|jetbrains-idea"] $ws3
+assign [class="dolphin"] $ws4
+assign [class="libreoffice-*|Wps|Wpp|Et"] $ws5
+assign [class="netease-cloud-music|vlc"] $ws6
+assign [class="electronic-wechat"] $ws9
+assign [class="Thunderbird"] $ws10
+
+######################
+# resize
+######################
 
 # resize window (you can also use the mouse for that)
 mode "resize" {
