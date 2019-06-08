@@ -9,7 +9,25 @@ export ZSH="/home/lzc/.oh-my-zsh"
 # load a random theme each time oh-my-zsh is loaded, in which case,
 # to know which specific one was loaded, run: echo $RANDOM_THEME
 # See https://github.com/robbyrussell/oh-my-zsh/wiki/Themes
+
 ZSH_THEME="candy"
+if [[ -e $HOME/.oh-my-zsh/custom/themes/powerlevel9k/powerlevel9k.zsh-theme ]]; then
+    user_symbol() {
+        if [[ $UID == 0 ]]; then
+            echo -n "%F{black}%K{red}  %f%k%F{red}%f "
+        else
+            echo -n "%F{black}%K{blue}  %f%k%F{blue}%f "
+        fi 
+    }
+    ZSH_THEME="powerlevel9k/powerlevel9k"
+    POWERLEVEL9K_MODE='nerdfont-complete'
+    POWERLEVEL9K_PROMPT_ON_NEWLINE=true
+    POWERLEVEL9K_SHORTEN_DIR_LENGTH=3
+    POWERLEVEL9K_LEFT_PROMPT_ELEMENTS=(context dir vcs)
+    POWERLEVEL9K_RIGHT_PROMPT_ELEMENTS=(status background_jobs time)
+    POWERLEVEL9K_MULTILINE_FIRST_PROMPT_PREFIX=''
+    POWERLEVEL9K_MULTILINE_LAST_PROMPT_PREFIX="$(user_symbol)"
+fi
 
 # Set list of themes to pick from when loading at random
 # Setting this variable when ZSH_THEME=random will cause zsh to load
