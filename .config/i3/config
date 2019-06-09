@@ -47,7 +47,12 @@ font pango:Noto Sans Mono CJK SC 9
 #################
 ## float thunderbird composite window
 for_window [window_role="Msgcompose|Preferences" class="(?i)Thunderbird"] floating enable
+
+## float vlc and netease-cloud-music
 for_window [class="netease-cloud-music|vlc"] floating enable
+
+## float qt5ct
+for_window [class="qt5ct|Lxappearance"] floating enable
 
 for_window [window_role="pop-up"] floating enable
 for_window [window_role="task_dialog"] floating enable
