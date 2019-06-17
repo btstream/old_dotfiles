@@ -191,6 +191,7 @@ assign [class="code-oss|jetbrains-idea"] $ws3
 assign [class="dolphin"] $ws4
 assign [class="libreoffice*|Soffice|Wps|Wpp|Et"] $ws5
 assign [class="netease-cloud-music|vlc"] $ws6
+assign [class="org.remmina.Remmina"] $ws8
 assign [class="electronic-wechat"] $ws9
 assign [class="Thunderbird"] $ws10
 

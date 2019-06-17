@@ -14,9 +14,9 @@ ZSH_THEME="candy"
 if [[ -e $HOME/.oh-my-zsh/custom/themes/powerlevel9k/powerlevel9k.zsh-theme ]]; then
     user_symbol() {
         if [[ $UID == 0 ]]; then
-            echo -n "%F{black}%K{red}  %f%k%F{red}%f "
+            echo -n "%F{black}%K{red} # %f%k%F{red}%f "
         else
-            echo -n "%F{black}%K{blue}  %f%k%F{blue}%f "
+            echo -n "%F{black}%K{blue} $ %f%k%F{blue}%f "
         fi 
     }
     ZSH_THEME="powerlevel9k/powerlevel9k"
