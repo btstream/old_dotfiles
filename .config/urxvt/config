@@ -3,6 +3,7 @@
 !!!!!!!!!!!!!!!!!!!!
 URxvt.iso14755: false
 URxvt.iso14755_52: false
+URxvt.termName: xterm-256color
 
 !!!!!!!!!!!!!!!!!!!!
 ! Apperance config
