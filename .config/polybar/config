@@ -157,14 +157,12 @@ label = %percentage_used%%
 type = internal/date
 interval = 5
 
-date = " %Y-%m-%d"
-date-alt = " "
+date = " %Y-%m-%d"
+date-alt = ""
 
 time = %H:%M
 time-alt = %H:%M
 
-format-prefix =  
-format-prefix-foreground = ${colors.foreground-alt}
 format-underline = #4285f4
 label = %date% %time%
 
