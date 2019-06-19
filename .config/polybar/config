@@ -56,7 +56,7 @@ font-0 = FuraCode Nerd Font:pixelsize=10;1
 font-1 = Noto Sans Mono CJK SC:pixelsize=10;0
 
 modules-left = i3 xwindow
-modules-right = change-vol-device pulseaudio memory cpu temperature date powermenu
+modules-right = memory cpu temperature audio date powermenu
 
 tray-position = right
 tray-padding = 2
@@ -168,6 +168,17 @@ format-prefix-foreground = ${colors.foreground-alt}
 format-underline = #4285f4
 label = %date% %time%
 
+[module/audio]
+type = custom/script
+exec = $HOME/.config/polybar/scripts/pulseaudio-rofi.sh --output_volume_listener
+tail = true
+format-underline = #4285f4
+click-right = $HOME/.config/polybar/scripts/pulseaudio-rofi.sh --output
+click-middle = $HOME/.config/i3/scripts/ch-vol-dev.sh
+click-left = $HOME/.config/polybar/scripts/pulseaudio-rofi.sh --mute
+scroll-up =  $HOME/.config/polybar/scripts/pulseaudio-rofi.sh --volume_up
+scroll-down = $HOME/.config/polybar/scripts/pulseaudio-rofi.sh --volume_down
+
 [module/change-vol-device]
 type = custom/text
 content = 醙 
@@ -180,7 +191,8 @@ format-volume = <label-volume> <bar-volume>
 label-volume = %percentage%%
 label-volume-foreground = ${root.foreground}
 
-label-muted =  muted
+;label-muted =  muted
+label-muted = muted
 label-muted-foreground = #666
 
 bar-volume-width = 10
