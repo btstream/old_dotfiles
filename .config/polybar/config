@@ -170,7 +170,7 @@ label = %date% %time%
 
 [module/change-vol-device]
 type = custom/text
-content = VOL 
+content = 醙 
 click-left = "$HOME/.config/i3/scripts/ch-vol-dev.sh"
 
 [module/pulseaudio]
