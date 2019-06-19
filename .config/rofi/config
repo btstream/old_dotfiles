@@ -2,3 +2,4 @@ rofi.theme: ~/.config/rofi/flat-material.rasi
 rofi.font: Monospace 10
 rofi.combi: run
 rofi.modi: drun
+rofi.show-icons: true
