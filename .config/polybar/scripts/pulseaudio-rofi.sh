@@ -91,7 +91,21 @@ output_volume() {
      pacmd list-sinks | awk '/^\s+name: /{indefault = $2 == "'"<$(get_default_sink)>"'"}
              /^\s+muted: / && indefault {muted=$2}
              /^\s+volume: / && indefault {volume=$5}
-             END { print muted=="no"?" "volume:"ﱝ Muted" }'
+             END { 
+                if (muted == "no") {
+                    volume_num = substr(volume, 1, length(volume)) + 0;
+                    if (volume_num>=75) {
+                        icon = "";
+                    } else if (volume_num <= 20) {
+                        icon = "";
+                    } else {
+                        icon = "";
+                    }
+                    printf("%s%3d%\n", icon, volume_num);
+                } else {
+                    print "ﱝ Muted";
+                }
+             }'
 }
 
 get_default_source() {
