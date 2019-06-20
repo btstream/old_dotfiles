@@ -1,9 +1,19 @@
 #!/bin/bash
 # author: Whizzzkid (me@nishantarora.in)
 
+pid=$$
+
+echo $pid
+otherProcess=$(pgrep bingwallpaper)
+for i in $otherProcess; do
+    if [[ $i != $pid ]]; then
+        kill -KILL $i
+    fi
+done
+
+
 rm -rf /tmp/*-bingwallpaper.log
 logFile=$(mktemp --suffix="-bingwallpaper.log")
-
 
 # Base URL.
 bing="http://www.bing.com"
