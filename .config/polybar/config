@@ -28,7 +28,7 @@ primary = #4285f4
 secondary = #e60053
 alert = #bd2c40
 
-[bar/example]
+[bar/top]
 ;monitor = ${env:MONITOR:HDMI-1}
 width = 100%
 height = 28
@@ -67,11 +67,8 @@ wm-restack = i3
 
 ;override-redirect = true
 
-;scroll-up = bspwm-desknext
-;scroll-down = bspwm-deskprev
-
-;scroll-up = i3wm-wsnext
-;scroll-down = i3wm-wsprev
+scroll-up = i3wm-wsnext
+scroll-down = i3wm-wsprev
 
 cursor-click = pointer
 cursor-scroll = ns-resize
@@ -81,17 +78,6 @@ type = internal/xwindow
 label = %title:0:30:...%
 format-prefix = " "
 label-font = 2
-
-[module/filesystem]
-type = internal/fs
-interval = 25
-
-mount-0 = /
-
-label-mounted = %{F#0a81f5}%mountpoint%%{F-}: %percentage_used%%
-label-unmounted = %mountpoint% not mounted
-label-unmounted-foreground = ${colors.foreground-alt}
-
 
 [module/i3]
 type = internal/i3
@@ -168,14 +154,14 @@ date-alt = ""
 time = %H:%M
 time-alt = %H:%M
 
-format-underline = #4285f4
+format-underline = ${colors.primary}
 label = %date% %time%
 
 [module/audio]
 type = custom/script
 exec = $HOME/.config/polybar/scripts/pulseaudio-rofi.sh --output_volume_listener
 tail = true
-format-underline = #4285f4
+format-underline = ${colors.primary}
 click-right = $HOME/.config/polybar/scripts/pulseaudio-rofi.sh --output
 click-middle = $HOME/.config/i3/scripts/ch-vol-dev.sh
 click-left = $HOME/.config/polybar/scripts/pulseaudio-rofi.sh --mute
