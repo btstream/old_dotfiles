@@ -79,7 +79,7 @@ cursor-scroll = ns-resize
 [module/xwindow]
 type = internal/xwindow
 label = %title:0:30:...%
-format-prefix = "ﬓ "
+format-prefix = " "
 label-font = 2
 
 [module/filesystem]
@@ -92,20 +92,25 @@ label-mounted = %{F#0a81f5}%mountpoint%%{F-}: %percentage_used%%
 label-unmounted = %mountpoint% not mounted
 label-unmounted-foreground = ${colors.foreground-alt}
 
-[module/start]
-type = custom/script
-exec = echo ""
-click-left = "rofi -show"
-
 
 [module/i3]
 type = internal/i3
 format = <label-state> <label-mode>
-format-prefix = " "
+format-prefix = " "
 index-sort = true
 wrapping-scroll = false
 strip-wsnumbers = true
 
+ws-icon-0 = 1:TERM;
+ws-icon-1 = 2:WEB;
+ws-icon-2 = 3:DEV;
+ws-icon-3 = 4:FM;
+ws-icon-4 = 5:OFFICE;
+ws-icon-5 = 6:MM;
+ws-icon-6 = 7:NS4W;
+ws-icon-7 = 8:RD;
+ws-icon-8 = 9:CHAT;
+ws-icon-9 = 10:MAIL;
 ; Only show workspaces on the same output as the bar
 ;pin-workspaces = true
 
@@ -115,7 +120,7 @@ label-mode-background = ${colors.primary}
 
 ; focused = Active workspace on focused monitor
 label-focused = %index%
-label-focused-background = ${colors.background-alt}
+label-focused-background = ${colors.primary}
 label-focused-underline= ${colors.primary}
 label-focused-padding = 1
 
@@ -130,7 +135,7 @@ label-visible-underline = ${self.label-focused-underline}
 label-visible-padding = ${self.label-focused-padding}
 
 ; urgent = Workspace with urgency hint set
-label-urgent = %index%!
+label-urgent = %index%
 label-urgent-background = ${colors.alert}
 label-urgent-padding = 1
 
