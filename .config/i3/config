@@ -256,7 +256,7 @@ exec_always --no-startup-id nm-applet --sm-disable &
 exec_always --no-startup-id /usr/bin/flameshot &
 
 ## compton & devilspie
-exec_always --no-startup-id /usr/bin/compton &
+exec_always --no-startup-id /usr/bin/compton --config ~/.config/compton/compton.conf &
 exec_always --no-startup-id /usr/bin/devilspie -a &
 
 ## kwallet
