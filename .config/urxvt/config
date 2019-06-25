@@ -27,7 +27,7 @@ URxvt.internalBorder: 10
 
 ! backgroud
 urxvt.depth: 32
-urxvt.background: [95]#282828 
+urxvt.background: [85]#282828 
 
 !!!!!!!! colors !!!!!!!!!!!
 ! special
