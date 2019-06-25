@@ -30,7 +30,7 @@ window {
 mainbox {
    background-color: @blackdarkest;
    spacing:0px;
-   children: [inputbar, message, sidebar, listview];
+   children: [inputbar, message, listview];
 }
 
 message {
