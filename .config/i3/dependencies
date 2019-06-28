@@ -9,3 +9,5 @@ network-manager-applet
 nerd-fonts-complete
 betterlockscreen
 compton
+jq
+xdotool
