@@ -195,6 +195,7 @@ bindsym $mod+Shift+0 move container to workspace $ws10
 
 # assign applications to workspace
 assign [class="Firefox" title=".*（隐私浏览）.*"] $ws7
+assign [class="URxvt"] $ws1
 assign [class="Chromium|Firefox" title="^(?:(?!\b隐私浏览\b).)*$"] $ws2 
 assign [class="code-oss|jetbrains-idea"] $ws3
 assign [class="dolphin"] $ws4
@@ -252,9 +253,6 @@ exec_always --no-startup-id /usr/bin/dunst &
 ## urxvtd
 exec_always --no-startup-id /usr/bin/urxvtd -q -f -o &
 
-## networkmanager
-exec_always --no-startup-id nm-applet --sm-disable &
-
 ## flameshot
 exec_always --no-startup-id /usr/bin/flameshot &
 
@@ -263,10 +261,13 @@ exec_always --no-startup-id /usr/bin/compton --config ~/.config/compton/compton.
 # exec_always --no-startup-id /usr/bin/devilspie -a &
 
 ## kwallet
-exec_always --no-startup-id /usr/lib/pam_kwallet_init &
+exec_always --no-startup-id /usr/lib/pam_kwallet_init
 
 ## gnome-keyring
-exec_always --no-startup-id /usr/bin/gnome-keyring-daemon --start --components=pkcs11,secrets &
+exec_always --no-startup-id /usr/bin/gnome-keyring-daemon --start --components=pkcs11,secrets
+
+## networkmanager
+exec_always --no-startup-id nm-applet --sm-disable &
 
 ## fcitx
 exec_always --no-startup-id/usr/bin/fcitx-autostart &

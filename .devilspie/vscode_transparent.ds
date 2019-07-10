@@ -1,6 +1,7 @@
 (if (or
         (contains (window_class) "code-oss")
         (contains (window_class) "URxvt")
+        (contains (window_class) "jetbrains-idea")
     )
     (begin
         (spawn_async (str "xprop -id " (window_xid) " -f _KDE_NET_WM_BLUR_BEHIND_REGION 32c -set _KDE_NET_WM_BLUR_BEHIND_REGION 0 "))
