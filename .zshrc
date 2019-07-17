@@ -23,7 +23,7 @@ if [[ -e $HOME/.oh-my-zsh/custom/themes/powerlevel9k/powerlevel9k.zsh-theme ]]; 
     POWERLEVEL9K_MODE='nerdfont-complete'
     POWERLEVEL9K_PROMPT_ON_NEWLINE=true
     POWERLEVEL9K_SHORTEN_DIR_LENGTH=3
-    POWERLEVEL9K_LEFT_PROMPT_ELEMENTS=(context dir vcs)
+    POWERLEVEL9K_LEFT_PROMPT_ELEMENTS=(context dir virtualenv vcs)
     POWERLEVEL9K_RIGHT_PROMPT_ELEMENTS=(status background_jobs time)
     POWERLEVEL9K_MULTILINE_FIRST_PROMPT_PREFIX=''
     POWERLEVEL9K_MULTILINE_LAST_PROMPT_PREFIX="$(user_symbol)"
