@@ -126,7 +126,7 @@ bindkey "\033[1~" beginning-of-line
 bindkey "\033[4~" end-of-line
 
 ## rust
-export RUSTUP_DIST_SERVER=https://mirrors.ustc.edu.cn/rust-static
+export RUSTUP_DIST_SERVER=https://mirrors.tuna.tsinghua.edu.cn/rustup
 
 ## node.js
 PATH="$HOME/.node_modules/bin:$PATH"
