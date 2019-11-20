@@ -135,7 +135,7 @@ export npm_config_prefix=~/.node_modules
 ## others
 alias open="xdg-open"
 export EDITOR=vim
-export PATH="${HOME}/.local/bin:$PATH"
+export PATH="${HOME}/.cargo/bin:${HOME}/.local/bin:$PATH"
 
 # dotfile manager
 alias dgit='git --git-dir ~/.dotfiles/.git --work-tree=$HOME'
