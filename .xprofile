@@ -1,8 +1,6 @@
-export QT_QPA_PLATFORMTHEME="qt5ct"
-
-# xdg_session_info
-export XDG_CURRENT_DESKTOP="KDE"
-export KDE_SESSION_VERSION="5"
+if [[ "$XDG_CURRENT_DESKTOP" == "i3" ]]; then
+    export QT_QPA_PLATFORMTHEME="qt5ct"
+fi
 
 export GTK_IM_MODULE=fcitx
 export QT_IM_MODULE=fcitx
