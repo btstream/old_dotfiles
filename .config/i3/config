@@ -265,6 +265,9 @@ exec_always --no-startup-id /usr/lib/pam_kwallet_init
 ## gnome-keyring
 exec_always --no-startup-id /usr/bin/gnome-keyring-daemon --start --components=pkcs11,secrets
 
+## nutstore
+exec_always --no-startup-id (sleep 20 && $HOME/.nutstore/dist/bin/nutstore-pydaemon.py) &
+
 ## networkmanager
 exec_always --no-startup-id nm-applet --sm-disable &
 
