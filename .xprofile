@@ -1,8 +1,28 @@
+#!/bin/bash
+
+#############################
+# i3 desktop settings
+#############################
 if [[ "$XDG_CURRENT_DESKTOP" == "i3" ]]; then
     export QT_QPA_PLATFORMTHEME="qt5ct"
 fi
 
+#############################
+# fcitx envrioment settings
+#############################
 export GTK_IM_MODULE=fcitx
 export QT_IM_MODULE=fcitx
 export XMODIFIERS=@im=fcitx
 export VDPAU_NVIDIA_NO_OVERLAY=1
+
+#############################
+# include all files in .xprofile.d
+#############################
+if [[ -d $HOME/.xprofile.d/ ]]; then
+    for i in $HOME/.xprofile.d/*; do
+        if [[ -e $i ]]; then
+            source "$i"
+        fi
+    done
+fi
+
