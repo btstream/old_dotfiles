@@ -49,7 +49,7 @@ font pango:Noto Sans Mono CJK SC 9
 for_window [window_role="Msgcompose|Preferences" class="(?i)Thunderbird"] floating enable
 
 ## float vlc and netease-cloud-music
-for_window [class="netease-cloud-music|vlc"] floating enable
+for_window [class="netease-cloud-music|vlc|Netease-cloud-music-gtk"] floating enable
 
 ## float qt5ct
 for_window [class="qt5ct|Lxappearance"] floating enable
@@ -203,7 +203,7 @@ assign [class="Chromium|Firefox|firefox" title="^(?:(?!\b隐私浏览\b).)*$"] $
 assign [class="code-oss|jetbrains-idea"] $ws3
 assign [class="dolphin|Doublecmd"] $ws4
 assign [class="libreoffice*|Soffice|Wps|Wpp|Et"] $ws5
-assign [class="netease-cloud-music|vlc"] $ws6
+assign [class="netease-cloud-music|vlc|Netease-cloud-music-gtk"] $ws6
 assign [class="org.remmina.Remmina"] $ws8
 assign [class="electronic-wechat"] $ws9
 assign [instance="wechat.exe"] $ws9
