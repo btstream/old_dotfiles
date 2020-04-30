@@ -252,6 +252,9 @@ exec_always --no-startup-id $HOME/.config/i3/scripts/bingwallpaper.sh &
 #################
 ## auto start up
 #################
+## xsettingd
+exec_always --no-startup-id /usr/bin/xsettingsd &
+
 ## polybar
 exec_always --no-startup-id $HOME/.config/polybar/launch.sh &
 
@@ -265,7 +268,7 @@ exec_always --no-startup-id /usr/bin/urxvtd -q -f -o &
 exec_always --no-startup-id /usr/bin/flameshot &
 
 ## compton & devilspie
-exec_always --no-startup-id /usr/bin/compton --config ~/.config/compton/compton.conf --experimental-backends &
+exec_always --no-startup-id /usr/bin/picom --config ~/.config/compton/compton.conf --experimental-backends &
 # exec_always --no-startup-id /usr/bin/devilspie -a &
 
 ## kwallet
