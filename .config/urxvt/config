@@ -70,17 +70,35 @@ URxvt.color15:      #e2f1f6
 !!!!!!!!!!!!!!!!!!!!!
 ! extensions
 !!!!!!!!!!!!!!!!!!!!!
-URxvt.perl-ext-common: default,clipboard,url-select,keyboard-select,matcher
+URxvt.perl-ext-common: default,clipboard,url-select,keyboard-select,matcher,tabbedex
 URxvt.url-launcher: /usr/bin/xdg-open
 URxvt.matcher.button: 1
 URxvt.underlineURLs: true
 URxvt.urlButton: 1
 
 !!!!!!!!!!!!!!!!!!!!!
+!tabs
+!!!!!!!!!!!!!!!!!!!!!
+URxvt.tabbed.title: yes
+
+!!!!!!!!!!!!!!!!!!!!!
 ! keyboard shortcuts
 !!!!!!!!!!!!!!!!!!!!!
 URxvt.keysym.Shift-Control-V: eval:paste_clipboard
 URxvt.keysym.Shift-Control-C: eval:selection_to_clipboard
+URxvt.keysym.Shift-Control-T: perl:tabbedex:new_tab
+URxvt.keysym.Shift-Control-W: perl:tabbedex:kill_tab
+URxvt.keysym.Control-Tab: perl:tabbedex:next_tab
+URxvt.keysym.Control-1:   perl:tabbedex:goto_tab_1
+URxvt.keysym.Control-2:   perl:tabbedex:goto_tab_2
+URxvt.keysym.Control-3:   perl:tabbedex:goto_tab_3
+URxvt.keysym.Control-4:   perl:tabbedex:goto_tab_4
+URxvt.keysym.Control-5:   perl:tabbedex:goto_tab_5
+URxvt.keysym.Control-6:   perl:tabbedex:goto_tab_6
+URxvt.keysym.Control-7:   perl:tabbedex:goto_tab_7
+URxvt.keysym.Control-8:   perl:tabbedex:goto_tab_8
+URxvt.keysym.Control-9:   perl:tabbedex:goto_tab_9
+URxvt.keysym.Control-0:   perl:tabbedex:goto_tab_10
 
 URxvt.keysym.C-Down: resize-font:smaller
 URxvt.keysym.C-Up: resize-font:bigger
