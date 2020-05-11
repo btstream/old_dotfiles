@@ -136,6 +136,7 @@ export npm_config_prefix=~/.node_modules
 
 ## others
 alias open="xdg-open"
+alias vim=nvim
 export EDITOR=vim
 export PATH="${HOME}/.cargo/bin:${HOME}/.local/bin:$PATH"
 
