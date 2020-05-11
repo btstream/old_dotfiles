@@ -204,7 +204,7 @@ bindsym $mod+Shift+0 move container to workspace $ws10
 # assign applications to workspace
 assign [class="Firefox" title=".*（隐私浏览）.*"] $ws7
 assign [class="Chromium|Firefox|firefox" title="^(?:(?!\b隐私浏览\b).)*$"] $ws2 
-assign [class="code-oss|jetbrains-idea|DBeaver"] $ws3
+assign [class="code-oss|jetbrains-idea|DBeaver|Code - Insiders|nvim-qt"] $ws3
 assign [class="dolphin|Doublecmd"] $ws4
 assign [class="libreoffice*|Soffice|Wps|Wpp|Et|Joplin|okular"] $ws5
 assign [class="netease-cloud-music|vlc|Netease-cloud-music-gtk"] $ws6
