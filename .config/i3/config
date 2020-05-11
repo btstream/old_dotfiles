@@ -64,7 +64,7 @@ for_window [window_type="dialog"] floating enable
 for_window [window_type="menu"] floating enable
 
 ## float wine-wechat
-for_window [instance="wechat.exe"] floating enable
+# for_window [instance="wechat.exe"] floating enable
 
 #################
 ## keyboard
@@ -204,9 +204,9 @@ bindsym $mod+Shift+0 move container to workspace $ws10
 # assign applications to workspace
 assign [class="Firefox" title=".*（隐私浏览）.*"] $ws7
 assign [class="Chromium|Firefox|firefox" title="^(?:(?!\b隐私浏览\b).)*$"] $ws2 
-assign [class="code-oss|jetbrains-idea"] $ws3
+assign [class="code-oss|jetbrains-idea|DBeaver"] $ws3
 assign [class="dolphin|Doublecmd"] $ws4
-assign [class="libreoffice*|Soffice|Wps|Wpp|Et"] $ws5
+assign [class="libreoffice*|Soffice|Wps|Wpp|Et|Joplin|okular"] $ws5
 assign [class="netease-cloud-music|vlc|Netease-cloud-music-gtk"] $ws6
 assign [class="org.remmina.Remmina"] $ws8
 assign [class="electronic-wechat"] $ws9
