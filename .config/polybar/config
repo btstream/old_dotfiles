@@ -82,7 +82,7 @@ label-font = 2
 [module/i3]
 type = internal/i3
 format = <label-state> <label-mode>
-format-prefix = " "
+format-prefix = " "
 index-sort = true
 wrapping-scroll = false
 strip-wsnumbers = true
