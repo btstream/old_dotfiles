@@ -1,0 +1,3 @@
+[submodule "xresources-themes"]
+	path = .config/urxvt/themes/xresources-themes
+	url = https://github.com/logico-dev/Xresources-themes.git

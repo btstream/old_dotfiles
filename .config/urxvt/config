@@ -30,7 +30,7 @@ urxvt.depth: 32
 urxvt.background: [85]#282828 
 
 !!!!!!!! colors !!!!!!!!!!!
-#include "./themes/onedark"
+#include "./themes/xresources-themes/one-dark.Xresources"
 
 !!!!!!!!!!!!!!!!!!!!!
 ! extensions
