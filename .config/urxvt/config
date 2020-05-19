@@ -27,10 +27,11 @@ URxvt.internalBorder: 10
 
 ! backgroud
 urxvt.depth: 32
-urxvt.background: [85]#282828 
+! urxvt.background: [90]#1E2127 
 
 !!!!!!!! colors !!!!!!!!!!!
-#include "./themes/xresources-themes/one-dark.Xresources"
+#define background_opacity 95 
+#include "./themes/base16/xresources/base16-material-darker.Xresources"
 
 !!!!!!!!!!!!!!!!!!!!!
 ! extensions
