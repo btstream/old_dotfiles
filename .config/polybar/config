@@ -119,7 +119,7 @@ label-focused-padding = 1
 ; unfocused = Inactive workspace on any monitor
 label-unfocused-font = 3
 label-unfocused = %icon%
-label-unfocused-padding = 1.5
+label-unfocused-padding = 1
 
 ; visible = Active workspace on unfocused monitor
 label-visible = %icon%
@@ -132,7 +132,7 @@ label-urgent = %icon%
 label-urgent-background = ${colors.background}
 label-urgent-foreground = ${colors.alert}
 label-urgent-underline = ${colors.alert}
-label-urgent-padding = 1.5
+label-urgent-padding = 1
 
 ; Separator in between workspaces
 ; label-separator = |
