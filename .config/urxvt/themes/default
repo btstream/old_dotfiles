@@ -1,6 +1,10 @@
 ! special
 URxvt.foreground:   #ffffff
-URxvt.background:   #000000
+#ifdef background_opacity
+URxvt.background:   [background_opacity]#212121
+#else
+URxvt.background:   #212121
+#endif
 URxvt.cursorColor:  #ffffff
 
 ! black
