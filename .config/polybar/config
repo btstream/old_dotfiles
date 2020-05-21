@@ -56,6 +56,7 @@ module-margin-right = 1
 
 font-0 = CaskaydiaCove Nerd Font:pixelsize=10;1
 font-1 = Noto Sans Mono CJK SC:pixelsize=10;0
+font-2 = CaskaydiaCove Nerd Font Mono:pixelsize=14;1
 
 modules-left = i3 xwindow
 modules-right = memory cpu temperature autio date powermenu
@@ -107,15 +108,18 @@ label-mode-foreground = #000
 label-mode-background = ${colors.primary}
 
 ; focused = Active workspace on focused monitor
+label-focused-font = 3
 label-focused = %icon%
 label-focused-background = ${colors.background-lighter}
 label-focused-foreground = ${colors.primary}
 label-focused-underline= ${colors.primary}
 label-focused-padding = 1
+; label-focused-margin = 1
 
 ; unfocused = Inactive workspace on any monitor
+label-unfocused-font = 3
 label-unfocused = %icon%
-label-unfocused-padding = 1
+label-unfocused-padding = 1.5
 
 ; visible = Active workspace on unfocused monitor
 label-visible = %icon%
@@ -128,7 +132,7 @@ label-urgent = %icon%
 label-urgent-background = ${colors.background}
 label-urgent-foreground = ${colors.alert}
 label-urgent-underline = ${colors.alert}
-label-urgent-padding = 1
+label-urgent-padding = 1.5
 
 ; Separator in between workspaces
 ; label-separator = |
