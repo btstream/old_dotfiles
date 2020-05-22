@@ -30,7 +30,7 @@ urxvt.depth: 32
 ! urxvt.background: [90]#1E2127 
 
 !!!!!!!! colors !!!!!!!!!!!
-#define background_opacity 90 
+#define background_opacity 80
 #include "./themes/default"
 
 !!!!!!!!!!!!!!!!!!!!!
