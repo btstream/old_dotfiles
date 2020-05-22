@@ -23,19 +23,19 @@ gaps outer 8
 ################
 ## colors
 ################
-set $bg-color               #4285f4
-set $inactive-bg-color      #282828
+set $active-border-color    #4285f4
+set $bg-color               #282828
+set $bg-color-lighter       #484848
 set $text-color             #f3f4f5
 set $inactive-text-color    #676E7D
-set $urgent-bg-color        #E53935
+set $urgent-border-color    #E53935
 set $indicator-color        #4285f4
 
-
-#                       border              background         text                 indicator
-client.focused          $bg-color           $bg-color          $text-color          $indicator-color
-client.unfocused        $inactive-bg-color  $inactive-bg-color $inactive-text-color $indicator-color
-client.focused_inactive $inactive-bg-color  $inactive-bg-color $inactive-text-color $indicator-color
-client.urgent           $urgent-bg-color    $urgent-bg-color   $text-color          $indicator-color          
+#                       border              background         text                 indicator           child-border
+client.focused          $bg-color           $bg-color-lighter  $text-color          $indicator-color    $active-border-color
+client.unfocused        $bg-color           $bg-color          $inactive-text-color $indicator-color    $bg-color
+client.focused_inactive $inactive-bg-color  $inactive-bg-color $inactive-text-color $indicator-color    $bg-color
+client.urgent           $urgent-bg-color    $urgent-bg-color   $text-color          $indicator-color    $urgent-border-color      
 
 #################
 ## fonts
