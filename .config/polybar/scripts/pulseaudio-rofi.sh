@@ -101,7 +101,11 @@ output_volume() {
                     } else {
                         icon = "";
                     }
-                    printf("%s%3d%\n", icon, volume_num);
+                    if (volume_num >= 100){
+                        printf("%s%4d%\n", icon, volume_num);
+                    } else {
+                        printf("%s%3d%\n", icon, volume_num);
+                    }
                 } else {
                     print "ﱝ Muted";
                 }
