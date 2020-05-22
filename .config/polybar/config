@@ -57,7 +57,7 @@ module-margin-right = 1
 
 font-0 = CaskaydiaCove Nerd Font:pixelsize=10;1
 font-1 = Noto Sans Mono CJK SC:pixelsize=10;0
-font-2 = CaskaydiaCove Nerd Font Mono:pixelsize=14;1
+font-2 = CaskaydiaCove Nerd Font Mono:pixelsize=16;1
 
 modules-left = i3 xwindow
 modules-right = memory cpu temperature audio date powermenu
@@ -129,6 +129,7 @@ label-visible-underline = ${self.label-focused-underline}
 label-visible-padding = ${self.label-focused-padding}
 
 ; urgent = Workspace with urgency hint set
+label-urgent-font = 3
 label-urgent = %icon%
 label-urgent-background = ${colors.background}
 label-urgent-foreground = ${colors.alert}
@@ -141,7 +142,7 @@ label-urgent-padding = 1
 [module/cpu]
 type = internal/cpu
 interval = 2
-format-prefix = "﬙ "
+format-prefix = " "
 format-prefix-foreground = ${colors.foreground-alt}
 format-underline = ${colors.alert}
 label = %percentage:2%%
@@ -149,7 +150,7 @@ label = %percentage:2%%
 [module/memory]
 type = internal/memory
 interval = 2
-format-prefix = " "
+format-prefix = "﬙ "
 format-prefix-foreground = ${colors.foreground-alt}
 format-underline = #4bffdc
 label = %percentage_used:2%%
