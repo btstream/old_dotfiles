@@ -57,7 +57,7 @@ module-margin-right = 1
 
 font-0 = CaskaydiaCove Nerd Font:pixelsize=10;1
 font-1 = Noto Sans Mono CJK SC:pixelsize=10;0
-font-2 = CaskaydiaCove Nerd Font Mono:pixelsize=16;1
+font-2 = CaskaydiaCove Nerd Font Mono:pixelsize=17;3
 
 modules-left = i3 xwindow
 modules-right = memory cpu temperature audio date powermenu
