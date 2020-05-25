@@ -31,7 +31,7 @@ urxvt.depth: 32
 
 !!!!!!!! colors !!!!!!!!!!!
 #define background_opacity 80
-#include "./themes/default"
+#include "./themes/base16-modify/base16-material-darker.Xresources"
 
 !!!!!!!!!!!!!!!!!!!!!
 ! extensions
