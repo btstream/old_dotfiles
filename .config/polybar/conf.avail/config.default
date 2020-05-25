@@ -1,0 +1,271 @@
+;==========================================================
+;
+;
+;   ██████╗  ██████╗ ██╗  ██╗   ██╗██████╗  █████╗ ██████╗
+;   ██╔══██╗██╔═══██╗██║  ╚██╗ ██╔╝██╔══██╗██╔══██╗██╔══██╗
+;   ██████╔╝██║   ██║██║   ╚████╔╝ ██████╔╝███████║██████╔╝
+;   ██╔═══╝ ██║   ██║██║    ╚██╔╝  ██╔══██╗██╔══██║██╔══██╗
+;   ██║     ╚██████╔╝███████╗██║   ██████╔╝██║  ██║██║  ██║
+;   ╚═╝      ╚═════╝ ╚══════╝╚═╝   ╚═════╝ ╚═╝  ╚═╝╚═╝  ╚═╝
+;
+;
+;   To learn more about how to configure Polybar
+;   go to https://github.com/jaagr/polybar
+;
+;   The README contains alot of information
+;
+;==========================================================
+
+[colors]
+;background = ${xrdb:color0:#222}
+background = #282828
+background-alt = #282828
+background-lighter = #383838
+;foreground = ${xrdb:color7:#222}
+foreground = #dfdfdf
+foreground-alt = #dfdfdf
+#primary = #ffb52a
+primary = #4285f4
+secondary = #e60053
+; alert = #bd2c40
+alert = #f43e50
+alert-alt = #f50a4d
+
+[bar/top]
+;monitor = ${env:MONITOR:HDMI-1}
+width = 100%
+height = 30
+;offset-x = 1%
+;offset-y = 1%
+radius = 0.0
+fixed-center = false
+
+background = ${colors.background}
+foreground = ${colors.foreground}
+
+line-size = 2
+line-color = #f00
+
+border-size = 0
+; border-color = #00000000
+
+padding-left = 1
+padding-right = 2
+
+module-margin-left = 1
+module-margin-right = 1
+
+font-0 = CaskaydiaCove Nerd Font:pixelsize=10;1
+font-1 = Noto Sans Mono CJK SC:pixelsize=10;0
+font-2 = CaskaydiaCove Nerd Font Mono:pixelsize=17;3
+
+modules-left = i3 xwindow
+modules-right = memory cpu temperature audio date powermenu
+
+tray-position = right
+tray-padding = 2
+tray-maxsize = 16
+;tray-background = #0063ff
+
+wm-restack = i3
+
+;override-redirect = true
+
+scroll-up = i3wm-wsnext
+scroll-down = i3wm-wsprev
+
+cursor-click = pointer
+cursor-scroll = ns-resize
+
+[module/xwindow]
+type = internal/xwindow
+label = %title:0:40:...%
+format-prefix = " "
+label-font = 2
+
+[module/i3]
+type = internal/i3
+format = <label-state> <label-mode>
+format-prefix = " "
+index-sort = true
+wrapping-scroll = false
+strip-wsnumbers = true
+
+ws-icon-0 = 1:TERM;
+ws-icon-1 = 2:WEB;
+ws-icon-2 = 3:DEV;
+ws-icon-3 = 4:FM;
+ws-icon-4 = 5:OFFICE;
+ws-icon-5 = 6:MM;
+ws-icon-6 = 7:NS4W;
+ws-icon-7 = 8:RD;
+ws-icon-8 = 9:CHAT;
+ws-icon-9 = 10:MAIL;
+; Only show workspaces on the same output as the bar
+;pin-workspaces = true
+
+label-mode-padding = 1
+label-mode-foreground = #000
+label-mode-background = ${colors.primary}
+
+; focused = Active workspace on focused monitor
+label-focused-font = 3
+label-focused = %icon%
+label-focused-background = ${colors.background-lighter}
+label-focused-foreground = ${colors.primary}
+label-focused-underline= ${colors.primary}
+label-focused-padding = 1
+; label-focused-margin = 1
+
+; unfocused = Inactive workspace on any monitor
+label-unfocused-font = 3
+label-unfocused = %icon%
+label-unfocused-padding = 1
+
+; visible = Active workspace on unfocused monitor
+label-visible = %icon%
+label-visible-background = ${self.label-focused-background}
+label-visible-underline = ${self.label-focused-underline}
+label-visible-padding = ${self.label-focused-padding}
+
+; urgent = Workspace with urgency hint set
+label-urgent-font = 3
+label-urgent = %icon%
+label-urgent-background = ${colors.background}
+label-urgent-foreground = ${colors.alert}
+label-urgent-underline = ${colors.alert}
+label-urgent-padding = 1
+
+; Separator in between workspaces
+; label-separator = |
+
+[module/cpu]
+type = internal/cpu
+interval = 2
+format-prefix = " "
+format-prefix-foreground = ${colors.foreground-alt}
+format-underline = ${colors.alert}
+label = %percentage:2%%
+
+[module/memory]
+type = internal/memory
+interval = 2
+format-prefix = "﬙ "
+format-prefix-foreground = ${colors.foreground-alt}
+format-underline = #4bffdc
+label = %percentage_used:2%%
+
+[module/date]
+type = internal/date
+interval = 5
+
+date = " %Y-%m-%d"
+date-alt = ""
+
+time = %H:%M
+time-alt = %H:%M
+
+format-underline = ${colors.primary}
+label = %date% %time%
+
+[module/audio]
+type = custom/script
+exec = $HOME/.config/polybar/scripts/pulseaudio-rofi.sh --output_volume_listener
+tail = true
+format-underline = ${colors.primary}
+click-right = $HOME/.config/polybar/scripts/pulseaudio-rofi.sh --output
+click-middle = $HOME/.config/i3/scripts/ch-vol-dev.sh
+click-left = $HOME/.config/polybar/scripts/pulseaudio-rofi.sh --mute
+scroll-up =  $HOME/.config/polybar/scripts/pulseaudio-rofi.sh --volume_up
+scroll-down = $HOME/.config/polybar/scripts/pulseaudio-rofi.sh --volume_down
+
+[module/pulseaudio]
+type = internal/pulseaudio
+
+format-volume = <label-volume> <bar-volume>
+label-volume = %percentage%%
+label-volume-foreground = ${root.foreground}
+
+;label-muted =  muted
+label-muted = muted
+label-muted-foreground = #666
+
+bar-volume-width = 10
+bar-volume-foreground-0 = #4285f4
+bar-volume-foreground-1 = #4285f4
+bar-volume-foreground-2 = #4285f4
+bar-volume-foreground-3 = #4285f4
+bar-volume-foreground-4 = #4285f4
+bar-volume-foreground-5 = #f5a70a
+bar-volume-foreground-6 = #ff5555
+bar-volume-gradient = false
+bar-volume-indicator = |
+bar-volume-indicator-font = 1
+bar-volume-fill = ─
+bar-volume-fill-font = 1
+bar-volume-empty = ─
+bar-volume-empty-font = 1
+bar-volume-empty-foreground = ${colors.foreground-alt}
+
+[module/temperature]
+type = internal/temperature
+thermal-zone = 0
+warn-temperature = 60
+
+format = <ramp> <label>
+;format-prefix = " "
+format-underline = ${colors.alert}
+format-warn = <ramp> <label-warn>
+format-warn-underline = ${self.format-underline}
+
+label = %temperature-c%
+label-warn = %temperature-c%
+label-warn-foreground = ${colors.secondary}
+
+ramp-0 = 
+ramp-1 = 
+ramp-2 = 
+ramp-foreground = ${colors.foreground-alt}
+
+[module/powermenu]
+type = custom/menu
+
+expand-right = true
+
+format-spacing = 1
+
+label-open = 
+label-open-foreground = ${colors.foreground-alt}
+label-close = ﰸ cancel
+label-close-foreground = ${colors.secondary}
+label-separator = |
+label-separator-foreground = ${colors.foreground-alt}
+
+menu-0-0 = reboot
+menu-0-0-exec = menu-open-1
+menu-0-1 = power off
+menu-0-1-exec = menu-open-2
+
+menu-1-0 = cancel
+menu-1-0-exec = menu-open-0
+menu-1-1 = reboot
+menu-1-1-exec = reboot
+
+menu-2-0 = power off
+menu-2-0-exec = poweroff
+menu-2-1 = cancel
+menu-2-1-exec = menu-open-0
+
+[settings]
+screenchange-reload = true
+;compositing-background = xor
+;compositing-background = screen
+;compositing-foreground = source
+;compositing-border = over
+;pseudo-transparency = false
+
+[global/wm]
+margin-top = 2
+margin-bottom = 2
+
+; vim:ft=dosini
