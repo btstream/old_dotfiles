@@ -28,7 +28,7 @@ set $bg-color               #282828
 set $bg-color-lighter       #484848
 set $text-color             #f3f4f5
 set $inactive-text-color    #676E7D
-set $urgent-border-color    #E53935
+set $urgent-border-color    #f43e50
 set $indicator-color        #4285f4
 
 #                       border              background         text                 indicator           child-border
