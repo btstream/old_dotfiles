@@ -29,7 +29,8 @@ set $bg-color-lighter       #4a4a4a
 set $text-color             #eeffff
 set $inactive-text-color    #353535
 set $urgent-border-color    #ff5370
-set $indicator-color        #89ddff
+# set $indicator-color        #89ddff
+set $indicator-color        #82aaff
 
 #                       border              background         text                 indicator           child-border
 client.focused          $bg-color           $bg-color-lighter  $text-color          $indicator-color    $active-border-color
