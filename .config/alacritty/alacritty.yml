@@ -70,10 +70,9 @@ scrolling:
   # to allow mouse scrolling for applications like `man`.
   #
   # Specifying `0` will disable faux scrolling.
-  faux_multiplier: 3
+  # faux_multiplier: 3
 
   # Scroll to the bottom when new text is written to the terminal.
-  auto_scroll: false
 
 # Spaces per Tab (changes require restart)
 #
@@ -82,41 +81,40 @@ scrolling:
 # Some applications, like Emacs, rely on knowing about the width of a tab.
 # To prevent unexpected behavior in these applications, it's also required to
 # change the `it` value in terminfo when altering this setting.
-tabspaces: 4
 
 # Font configuration (changes require restart)
 font:
   # Normal (roman) font face
-  #normal:
+  normal:
     # Font family
     #
     # Default:
     #   - (macOS) Menlo
     #   - (Linux) monospace
     #   - (Windows) Consolas
-    #family: monospace
+    family: CaskaydiaCove Nerd Font Mono
 
     # The `style` can be specified to pick a specific face.
     #style: Regular
 
   # Bold font face
-  #bold:
+  bold:
     # Font family
     #
     # If the bold family is not specified, it will fall back to the
     # value specified for the normal font.
-    #family: monospace
+    family: CaskaydiaCove Nerd Font Mono
 
     # The `style` can be specified to pick a specific face.
     #style: Bold
 
   # Italic font face
-  #italic:
+  italic:
     # Font family
     #
     # If the italic family is not specified, it will fall back to the
     # value specified for the normal font.
-    #family: monospace
+    family: CaskaydiaCove Nerd Font Mono
 
     # The `style` can be specified to pick a specific face.
     #style: Italic
@@ -163,36 +161,39 @@ debug:
 # If `true`, bold text is drawn using the bright color variants.
 draw_bold_text_with_bright_colors: true
 
-# Colors (Tomorrow Night Bright)
 colors:
   # Default colors
   primary:
-    background: '0x282828'
-    foreground: '0xffffff'
+    background: '0x212121'
+    foreground: '0xeeffff'
+
+  # Colors the cursor will use if `custom_cursor_colors` is true
+  cursor:
+    text: '0x212121'
+    cursor: '0xeeffff'
 
   # Normal colors
   normal:
-    black:   '0x151515'
-    red:     '0xff8eaf'
-    green:   '0xa6e25f'
-    yellow:  '0xf8e578'
-    blue:    '0xa6e2f0'
-    magenta: '0xe85b92'
-    cyan:    '0x5f868f'
-    white:   '0xd5f1f2'
+    black:   '0x212121'
+    red:     '0xf07178'
+    green:   '0xc3e88d'
+    yellow:  '0xffcb6b'
+    blue:    '0x82aaff'
+    magenta: '0xc792ea'
+    cyan:    '0x89ddff'
+    white:   '0xeeffff'
 
   # Bright colors
   bright:
-    black:   '0x696969'
-    red:     '0xed4c7a'
-    green:   '0xa6e179'
-    yellow:  '0xffdf6b'
-    blue:    '0x79d2ff'
-    magenta: '0xbb5d79'
-    cyan:    '0x87a8af'
-    white:   '0xe2f1f6'
-
-  indexed_colors: []
+    black:   '0x4a4a4a'
+    red:     '0xf78c6c'
+    green:   '0x303030'
+    yellow:  '0x353535'
+    blue:    '0xb2ccd6'
+    magenta: '0xeeffff'
+    cyan:    '0xff5370'
+    white:   '0xffffff'
+    indexed_colors: []
 
 # Visual Bell
 #
