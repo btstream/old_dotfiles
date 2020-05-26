@@ -6,7 +6,7 @@ allow_bold = true
 #cell_width_scale = 1.0
 #clickable_url = true
 dynamic_title = true
-font = FuraCode Nerd Font Mono 11
+font =  CaskaydiaCove Nerd Font Mono 11
 #fullscreen = true
 #icon_name = terminal
 #mouse_autohide = false
@@ -39,45 +39,55 @@ browser = xdg-open
 
 # "off", "left" or "right"
 #scrollbar = off
-
 [colors]
-# special
-foreground      = #ffffff
-foreground_bold = #ffffff
-cursor          = #ffffff
-background      = rgba(40, 40, 40, .85)
+# Base16 Material Darker
+# Author: Nate Peterson
 
-# black
-color0  = #151515
-color8  = #696969
+foreground          = #EEFFFF
+foreground_bold     = #EEFFFF
+cursor              = #EEFFFF
+cursor_foreground   = #212121
+background          = rgba(33,33,33,0.85)
 
-# red
-color1  = #ff8eaf
-color9  = #ed4c7a
+# 16 color space
 
-# green
-color2  = #a6e25f
-color10 = #a6e179
+# Black, Gray, Silver, White
+color0  = #212121
+color8  = #4A4A4A
+color7  = #EEFFFF
+color15 = #FFFFFF
 
-# yellow
-color3  = #f8e578
-color11 = #ffdf6b
+# Red
+color1  = #F07178
+color9  = #F07178
 
-# blue
-color4  = #a6e2f0
-color12 = #79d2ff
+# Green
+color2  = #C3E88D
+color10 = #C3E88D
 
-# magenta
-color5  = #e85b92
-color13 = #bb5d79
+# Yellow
+color3  = #FFCB6B
+color11 = #FFCB6B
 
-# cyan
-color6  = #5f868f
-color14 = #87a8af
+# Blue
+color4  = #82AAFF
+color12 = #82AAFF
 
-# white
-color7  = #d5f1f2
-color15 = #e2f1f6
+# Purple
+color5  = #C792EA
+color13 = #C792EA
+
+# Teal
+color6  = #89DDFF
+color14 = #89DDFF
+
+# Extra colors
+color16 = #F78C6C
+color17 = #FF5370
+color18 = #303030
+color19 = #353535
+color20 = #B2CCD6
+color21 = #EEFFFF
 
 [hints]
 #font = Monospace 12
