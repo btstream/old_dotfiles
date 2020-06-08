@@ -3,7 +3,7 @@
 #############################
 # i3 desktop settings
 #############################
-if [[ "$XDG_CURRENT_DESKTOP" == "i3" ]]; then
+if [[ "$XDG_CURRENT_DESKTOP" == "i3" || "$DESKTOP_SESSION" == "/usr/share/xsessions/awesome" ]]; then
     export QT_QPA_PLATFORMTHEME="qt5ct"
 fi
 
