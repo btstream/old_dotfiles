@@ -13,7 +13,7 @@ URxvt.termName: xterm-256color
 URxvt.cursorBlink: true
 
 ! icons
-URxvt.iconFile: /usr/share/icons/Qogir-dark/scalable/apps/terminal.svg
+URxvt*iconFile: /usr/share/icons/Tela-blue-dark/scalable/apps/terminal.svg
 
 ! font config
 URxvt.font: xft:CaskaydiaCove Nerd Font Mono:size=11,xft:FZZhunYuan\\-M02S:size=11,xft:FZZhunYuan\\-M02T:size=11
@@ -33,7 +33,7 @@ urxvt.depth: 32
 ! urxvt.background: [90]#1E2127 
 
 !!!!!!!! colors !!!!!!!!!!!
-#define background_opacity 90
+#define background_opacity 85
 #include "./themes/base16-modify/base16-material-darker.Xresources"
 
 !!!!!!!!!!!!!!!!!!!!!
