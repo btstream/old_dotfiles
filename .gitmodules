@@ -1,3 +1,6 @@
 [submodule "base16-xresources"]
 	path = .config/urxvt/themes/base16
 	url = https://github.com/pinpox/base16-xresources.git
+[submodule "oh-my-tmux"]
+	path = /home/lzc/.config/tmux/oh-my-tmux
+	url = https://github.com/gpakosz/.tmux.git
