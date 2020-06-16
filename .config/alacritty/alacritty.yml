@@ -328,11 +328,12 @@ live_config_reload: true
 #  args:
 #    - --login
 shell:
-  program: /bin/bash
+  program: /bin/tmux
   args:
-    - -l
-    - -c
-    - "tmux attach || tmux"
+    - new-session
+    - "-A"
+    - "-s"
+    - "main"
 
 # Windows 10 ConPTY backend (Windows only)
 #
@@ -566,23 +567,23 @@ key_bindings:
   - { key: F12,      mods: Super,   chars: "\x1b[24;3~"                      }
   - { key: NumpadEnter,             chars: "\n"                              }
   # keybindings for tmux
-  - { key: W,     mods: Control|Shift,       chars: "\x18\x78" }
+  # - { key: W,     mods: Control|Shift,       chars: "\x18\x78" }
   # - { key: H,     mods: Control,       chars: "\x18\x68" }
   # - { key: J,     mods: Control,       chars: "\x18\x6a" }
   # - { key: K,     mods: Control,       chars: "\x18\x6b" }
   # - { key: L,     mods: Control,       chars: "\x18\x6c" }
-  - { key: C,     mods: Control|Shift,       chars: "\x0a" }
-  - { key: T,     mods: Control|Shift,       chars: "\x18\x63" }
-  - { key: Key1,  mods: Control,       chars: "\x18\x31" }
-  - { key: Key2,  mods: Control,       chars: "\x18\x32" }
-  - { key: Key3,  mods: Control,       chars: "\x18\x33" }
-  - { key: Key4,  mods: Control,       chars: "\x18\x34" }
-  - { key: Key5,  mods: Control,       chars: "\x18\x35" }
-  - { key: Key6,  mods: Control,       chars: "\x18\x36" }
-  - { key: Key7,  mods: Control,       chars: "\x18\x37" }
-  - { key: Key8,  mods: Control,       chars: "\x18\x38" }
-  - { key: Key9,  mods: Control,       chars: "\x18\x39" }
-  - { key: Left,  mods: Control,       chars: "\x18\x48" }
-  - { key: Down,  mods: Control,       chars: "\x18\x4a" }
-  - { key: Up,    mods: Control,       chars: "\x18\x4b" }
-  - { key: Right, mods: Control,       chars: "\x18\x4c" }
+  # - { key: C,     mods: Control|Shift,       chars: "\x0a" }
+  # - { key: T,     mods: Control|Shift,       chars: "\x18\x63" }
+  # - { key: Key1,  mods: Control,       chars: "\x18\x31" }
+  # - { key: Key2,  mods: Control,       chars: "\x18\x32" }
+  # - { key: Key3,  mods: Control,       chars: "\x18\x33" }
+  # - { key: Key4,  mods: Control,       chars: "\x18\x34" }
+  # - { key: Key5,  mods: Control,       chars: "\x18\x35" }
+  # - { key: Key6,  mods: Control,       chars: "\x18\x36" }
+  # - { key: Key7,  mods: Control,       chars: "\x18\x37" }
+  # - { key: Key8,  mods: Control,       chars: "\x18\x38" }
+  # - { key: Key9,  mods: Control,       chars: "\x18\x39" }
+  # - { key: Left,  mods: Control,       chars: "\x18\x48" }
+  # - { key: Down,  mods: Control,       chars: "\x18\x4a" }
+  # - { key: Up,    mods: Control,       chars: "\x18\x4b" }
+  # - { key: Right, mods: Control,       chars: "\x18\x4c" }
