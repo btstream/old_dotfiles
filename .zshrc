@@ -122,8 +122,8 @@ source $ZSH/oh-my-zsh.sh
 zstyle ":completion:*:commands" rehash 1
 
 ## keybord shortcut, home, end for urxvt
-bindkey "\033[1~" beginning-of-line
-bindkey "\033[4~" end-of-line
+bindkey "^[[8~" end-of-line
+bindkey "^[[7~" beginning-of-line
 
 ## rust
 # export RUSTUP_DIST_SERVER=https://mirrors.tuna.tsinghua.edu.cn/rustup
