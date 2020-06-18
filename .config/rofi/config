@@ -1,5 +1,5 @@
-rofi.theme: ~/.config/rofi/flat-material-darker.rasi
-rofi.font: Monospace 10
+rofi.theme: ~/.config/rofi/themes/flat-material-darker.rasi
+rofi.font: sans 9
 rofi.combi: run
 rofi.modi: drun
 rofi.show-icons: true
