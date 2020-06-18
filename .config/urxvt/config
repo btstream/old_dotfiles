@@ -49,6 +49,15 @@ URxvt.urlButton: 1
 !tabs
 !!!!!!!!!!!!!!!!!!!!!
 URxvt.tabbed.title: yes
+URxvt.tabbed.tabbar-fg: 15
+URxvt.tabbed.tabbar-bg: 0
+URxvt.tabbed.tab-fg: 7
+URxvt.tabbed.tab-bg: 8
+URxvt.tabbed.title-fg: bold 7
+URxvt.tabbed.bell-bg: 17
+URxvt.tabbed.bell-fg: 7
+URxvt.tabbed.bell-tab-fg: 0
+Urxvt.tabbed.bell-tab-bg: 12
 
 !!!!!!!!!!!!!!!!!!!!!
 ! keyboard shortcuts
