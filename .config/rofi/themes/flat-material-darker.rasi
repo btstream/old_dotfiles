@@ -54,7 +54,7 @@ listview {
 }
 
 element {
-   padding: 7px 15px;
+   padding: 4px 15px;
 }
 
 element normal.normal {
@@ -131,6 +131,7 @@ prompt {
    padding:6px 9px;
    background-color: @maincolor;
    text-color:@blackwidget;
+   font: "monospace 10";
 }
 
 entry {
