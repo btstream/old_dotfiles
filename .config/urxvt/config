@@ -17,7 +17,7 @@ URxvt*iconFile: /usr/share/icons/Tela-blue-dark/scalable/apps/terminal.svg
 
 ! font config
 ! URxvt.font: xft:mononoki Nerd Font Mono:size=12,xft:FZZhunYuan\\-M02S:size=11,xft:FZZhunYuan\\-M02T:size=11
-URxvt.font: xft:mononoki Nerd Font Mono:size=11.5
+URxvt.font: xft:mononoki Nerd Font Mono:size=11.5,xft:AR PL KaitiM GB:size=11.5,xft:AR PL KaitiM Big5:size=11.5
 ! URxvt.letterSpace: -1
 
 ! scrollbar
